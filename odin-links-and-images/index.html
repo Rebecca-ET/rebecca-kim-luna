@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Links and Images</title>
+    </head>
+
+    <body>
+        <h1>Homepage</h1>
+
+        <h2>Absolute Links</h2>
+        <h4>Opening Link in the Same Tab:</h2>
+            <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+        <h4>Opening Link in a New Tab:</h2>
+
+            <!-- target="_blank" opens the link in a new tab -->
+            <!-- rel="noopener" prevents the new tab from accessing the original page, ensuring security -->
+            <!-- noreferrer provided both privacy and security by preventing the new page from knowing where the user came from (hiding the referrer) -->
+            
+            <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+        <h2>Relative Links</h2>
+            <p><a href="./pages/about.html">About</a></p>
+
+        <h2>Images</h2>
+            <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="310" width="310">
+            <img src="./images/dog.jpg" alt="A Pug Wearing a Sweater" height="400" width="310">
+</html>
