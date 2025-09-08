@@ -1,0 +1,57 @@
+body {
+  background-color: lightyellow;
+  color: black;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: black;
+  font-weight: 1200px;
+  text-transform: capitalize;
+}
+
+section {
+  margin: 20px; /* space between sections */
+  padding: 20px; /* padding around each section */
+}
+
+#About {
+  text-align: center; /* Make title centered */
+  background-color: lightgreen;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#About img {
+  border-radius: 50%;
+  /* max-width: 150px; */
+  border: 5px solid darkgreen;
+}
+
+#Experience {
+  background-color: lightpink;
+}
+
+#Experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#Experience li {
+  background-color: lightgoldenrodyellow;
+  margin-bottom: 4px;
+}
+
+#Connect {
+  background-color: lightgreen;
+}
+
+#Connect a {
+  color: blue;
+}
+
+#Connect a:hover {
+  color: purple;
+  text-decoration: underline;
+}
