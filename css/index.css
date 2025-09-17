@@ -1,11 +1,48 @@
 body {
-  background-color: lightyellow;
-  color: black;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: black;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 1.6;
 }
 
-nav ul{
+/* Mobile */
+@media (max-width: 600px) {
+  nav ul {
+    align-items: center;
+    gap: 12px;
+  }
+  header {
+    background-color: grey; /* Why is the navigation bar still black? */
+  }
+  h1 {
+    color: purple; /* Why is my name still white? */
+  }
+  body {
+    background-color: grey;
+    color: purple;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) and (min-width: 601) {
+  nav ul {
+    justify-content: center;
+    gap: 16px;
+  }
+  body {
+    /* This color and font aren't showing */
+    background-color: grey;
+    color: pink;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  section {
+    background-color: black;
+  }
+}
+
+nav ul {
   justify-content: center;
   list-style-type: none;
   padding: 20px;
@@ -16,25 +53,26 @@ nav ul{
 }
 
 /* nav li{
-  background-color: yellow;
+  background-color: black;
 } */
 
-header{
+header {
   position: sticky;
   top: 0;
+  background-color: black;
 }
 
-nav ul a{
+nav ul a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 2px 15px;
 }
 
 h1 {
   text-align: center;
   font-size: 3em;
-  color: black;
-  font-weight: 1200px;
+  color: white;
+  font-weight: 900px;
   text-transform: capitalize;
 }
 
@@ -46,21 +84,24 @@ section {
 #About {
   text-align: center; /* Make title centered */
   background-color: lightgreen;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #About img {
+  height: 300px;
+  object-fit: cover;
   border-radius: 50%;
   /* max-width: 150px; */
   border: 5px solid darkgreen;
+  max-width: 300px;
 }
 
 #Experience {
-  background-color: lightpink;
+  background-color: lightgreen;
 }
 
 #Experience ul {
-  list-style-type:none;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -69,7 +110,7 @@ section {
   justify-content: center;
 }
 
-.job-container{
+.job-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -78,6 +119,14 @@ section {
 #Experience li {
   background-color: lightgoldenrodyellow;
   margin-bottom: 4px;
+}
+
+#Projects {
+  background-color: lightgreen;
+}
+
+#Skills {
+  background-color: lightgreen;
 }
 
 #Connect {
@@ -93,10 +142,10 @@ section {
   text-decoration: underline;
 }
 
-#Connect u1{
+#Connect ul {
   list-style: none;
-  padding:20px;
-  display:flex;
+  padding: 20px;
+  display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
