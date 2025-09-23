@@ -5,43 +5,6 @@ body {
   line-height: 1.6;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  nav ul {
-    align-items: center;
-    gap: 12px;
-  }
-  header {
-    background-color: grey; /* Why is the navigation bar still black? */
-  }
-  h1 {
-    color: purple; /* Why is my name still white? */
-  }
-  body {
-    background-color: grey;
-    color: purple;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-}
-
-/* Tablet */
-@media (max-width: 900px) and (min-width: 601) {
-  nav ul {
-    justify-content: center;
-    gap: 16px;
-  }
-  body {
-    /* This color and font aren't showing */
-    background-color: grey;
-    color: pink;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
-  section {
-    background-color: black;
-  }
-}
-
 nav ul {
   justify-content: center;
   list-style-type: none;
@@ -72,7 +35,7 @@ h1 {
   text-align: center;
   font-size: 3em;
   color: white;
-  font-weight: 900px;
+  font-weight: 900;
   text-transform: capitalize;
 }
 
@@ -83,7 +46,7 @@ section {
 
 #About {
   text-align: center; /* Make title centered */
-  background-color: lightgreen;
+  background-color: mediumseagreen;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,7 +60,7 @@ section {
 }
 
 #Experience {
-  background-color: lightgreen;
+  background-color: mediumseagreen;
 }
 
 #Experience ul {
@@ -122,15 +85,32 @@ section {
 }
 
 #Projects {
-  background-color: lightgreen;
+  background-color: mediumseagreen;
 }
 
 #Skills {
-  background-color: lightgreen;
+  background-color: mediumseagreen;
+}
+
+#Skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#Skills li {
+  font-size: medium;
+  background-color: darkslategray;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5%;
 }
 
 #Connect {
-  background-color: lightgreen;
+  background-color: mediumseagreen;
 }
 
 #Connect a {
@@ -148,4 +128,41 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav ul {
+    align-items: center;
+    gap: 12px;
+  }
+  header {
+    background-color: grey; /* Why is the navigation bar still black? */
+  }
+  h1 {
+    color: purple; /* Why is my name still white? */
+  }
+  body {
+    background-color: grey;
+    color: purple;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  nav ul {
+    justify-content: center;
+    gap: 16px;
+  }
+  body {
+    /* This color and font aren't showing */
+    background-color: grey;
+    color: pink;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  section {
+    background-color: black;
+  }
 }
