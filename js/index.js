@@ -96,7 +96,7 @@ messageForm.addEventListener("submit", function (event) {
   const newMessage = document.createElement("li");
 
   // Set the inner HTML
-  newMessage.innerHTML = `<a href="mailto:${userEmail}">${userName}"</a>: <span>${userMessage}</span>`;
+  newMessage.innerHTML = `<a href="mailto:${userEmail}">${userName}</a>: <span>${userMessage}</span>`;
 
   //Create an edit button
   const editButton = document.createElement("button");
