@@ -147,3 +147,55 @@ messageForm.addEventListener("submit", function (event) {
   // Clear form after submission
   messageForm.reset();
 });
+
+// -------------- PROJECT SECTION ------------------
+// Fetch your GitHub repositories
+fetch("https://api.github.com/users/Rebecca-ET/repos")
+  .then((response) => {
+    //Errror fetching data
+    if (!response.ok) {
+      // Throw an error
+      throw new Error(
+        "Failed to fetch data from GitHub. Please try again later"
+      );
+    }
+
+    // Return the response JSON data
+    return response.json();
+  })
+  .then((repositories) => {
+    // repositories = JSON.parse(this.repositories);
+    console.log("Repositories: ", repositories);
+    // Get the Projects section
+    const projectSection = document.getElementById("Projects");
+    // Select the list within the Projects section
+    const projectList = projectSection.querySelector("ul");
+    // Clear the content just in case
+    projectList.innerHTML = "";
+
+    // Iterate through all the public repositories
+    for (let i = 0; i < repositories.length; i++) {
+      // Create a new list item
+      const project = document.createElement("li");
+      // Create a link for the list item
+      const link = document.createElement("a");
+      // Set the link url
+      link.href = repositories[i].html_url;
+      // Set the text for the link
+      link.textContent = repositories[i].name;
+      // Append the link to the list item
+      project.appendChild(link);
+      // Append the list item to the list of projects
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    // Log the error
+    console.error("Error fetching repositories:", error);
+    // Get the Projects section
+    const projectSection = document.getElementById("Projects");
+    // Add an error message on the ui
+    const errorMessage = document.createElement("p");
+    errorMessage.innerHTML = "Unable to load projects. Please try again later.";
+    projectSection.appendChild(errorMessage);
+  });

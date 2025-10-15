@@ -88,6 +88,23 @@ section {
   background-color: mediumseagreen;
 }
 
+#Projects ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#Projects li {
+  font-size: medium;
+  background-color: white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 3%;
+}
+
 #Skills {
   background-color: mediumseagreen;
 }
